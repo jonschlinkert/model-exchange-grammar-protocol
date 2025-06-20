@@ -8,6 +8,20 @@ The Model Exchange Grammar Protocol aims to be a simple, extensible, and non-det
 
 The MEGP specification is a work in progress, you can view the document in its current state [here](grammar.md).
 
+## Example Usage
+
+A typical exchange might be defined as:
+
+```
+<exchange> ::= (<turn>)*
+<turn> ::= <role_message>
+<role_message> ::= <system_message> | <user_message> | <assistant_message> | <tool_message>
+<system_message> ::= <message>
+<user_message> ::= <message>
+<assistant_message> ::= <message>
+<tool_message> ::= <message>
+```
+
 ## Why is this needed?
 
 When designing AI-powered interfaces, debugging conversation flows, or explaining expected behavior in code and documentation, developers need a clear way to model and communicate interaction patterns. Common challenges include:
